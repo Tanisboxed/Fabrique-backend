@@ -12,7 +12,7 @@ class ProductService {
 
   static async getProductById(id) {
     try {
-      const product = await Product.findById(id).populate("reviews");
+      const product = await Product.findById(id)
       if (!product) {
         throw new Error("Product not found");
       }

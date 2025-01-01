@@ -44,7 +44,17 @@ const getProductBySlug = asyncHandler(async (req, res) => {
   }
 });
 
+const getProductById = asyncHandler(async(req,res)=>{
+  try{
+    const product= await ProductService.getProductById(req.params.id);
+    res.json(product);
+  } catch(error){
+    res.status(500).json({error: "Error fetching product"});
+  }
+})
+
 module.exports = {
   getProducts,
   getProductBySlug,
+  getProductById,
 };
