@@ -4,6 +4,8 @@ const seedReviews = require("./review.seeder");
 const seedProducts = require("./product.seeder");
 const seedCategories = require("./category.seeder");
 
+require("dotenv").config();
+
 const MONGO_URI =
   process.env.MONGO_URI || "mongodb://localhost:27017/ecommerce";
 
