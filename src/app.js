@@ -12,7 +12,7 @@ const corsOptions = {
 
 const app = express();
 
-setupLogger(app);
+//setupLogger(app);
 app.use(express.json());
 app.use(cors(corsOptions));
 app.use(express.static("public"));
