@@ -2,7 +2,6 @@ require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
 const routes = require("./routes/index");
-const setupLogger = require("./helper/logger");
 
 const corsOptions = {
   origin: "*",
@@ -12,7 +11,6 @@ const corsOptions = {
 
 const app = express();
 
-//setupLogger(app);
 app.use(express.json());
 app.use(cors(corsOptions));
 app.use(express.static("public"));
